@@ -17,8 +17,8 @@
 package com.example.jhordan.euro_cleanarchitecture.data.repository;
 
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
-import com.example.jhordan.euro_cleanarchitecture.data.local.LocalApi;
-import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamsLocalApiDataSource;
+import com.example.jhordan.euro_cleanarchitecture.data.local.ApiInterface;
+import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamsApiDataSource;
 import io.reactivex.Observable;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,37 +31,38 @@ import org.mockito.runners.MockitoJUnitRunner;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
-@RunWith(MockitoJUnitRunner.class) public class TeamLocalApiDataSourceTest {
+@RunWith(MockitoJUnitRunner.class) public class TeamApiInterfaceDataSourceTest {
 
   private static final String ANY_FLAG_OF_TEAM_ENTITY = "ESP";
 
-  @Mock LocalApi localApi;
+  @Mock
+  ApiInterface apiInterface;
 
-  private TeamsLocalApiDataSource localApiDataSource;
+  private TeamsApiDataSource localApiDataSource;
 
   @Before public void setUp() {
-    localApiDataSource = new TeamsLocalApiDataSource(localApi);
+    localApiDataSource = new TeamsApiDataSource(apiInterface);
   }
 
   @Test public void givenATeamEntityListFromLocalApi() {
     localApiDataSource.teamEntityList();
-    verify(localApi).teamEntityList();
+    verify(apiInterface).teamEntityList();
   }
 
   @Test public void givenATeamEntityByFlagFromLocalApi() {
     localApiDataSource.teamEntity(ANY_FLAG_OF_TEAM_ENTITY);
-    verify(localApi).teamEntity(ANY_FLAG_OF_TEAM_ENTITY);
+    verify(apiInterface).teamEntity(ANY_FLAG_OF_TEAM_ENTITY);
   }
 
   @Test public void givenAnObservableCollectionTeamEntity() {
     List<TeamEntity> teamEntities = new ArrayList<>();
     Observable<List<TeamEntity>> fakeListObservable = Observable.just(teamEntities);
-    given(localApi.teamEntityList()).willReturn(fakeListObservable);
+    given(apiInterface.teamEntityList()).willReturn(fakeListObservable);
   }
 
   @Test public void givenAnObservableTeamEntity() {
     TeamEntity fakeEntity = new TeamEntity();
     Observable<TeamEntity> fakeObservable = Observable.just(fakeEntity);
-    given(localApi.teamEntity(ANY_FLAG_OF_TEAM_ENTITY)).willReturn(fakeObservable);
+    given(apiInterface.teamEntity(ANY_FLAG_OF_TEAM_ENTITY)).willReturn(fakeObservable);
   }
 }

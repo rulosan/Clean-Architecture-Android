@@ -47,10 +47,15 @@ dependencies {
   compile picasso
   compile gson
 
+  //http client
+  compile 'com.squareup.okhttp3:okhttp:3.8.1'
+
   //Testing
   compile testingDependencies.junit
   compile testingDependencies.mockito
   compile testingDependencies.hamcrest
   compile testingDependencies.robolectric
+
+
 }
 

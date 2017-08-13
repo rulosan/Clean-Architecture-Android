@@ -18,7 +18,8 @@ package com.example.jhordan.euro_cleanarchitecture.data.repository.datasource;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import com.example.jhordan.euro_cleanarchitecture.data.local.LocalImpl;
+import com.example.jhordan.euro_cleanarchitecture.data.local.LocalStorageApiImpl;
+import com.example.jhordan.euro_cleanarchitecture.data.local.WebApiImp;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.TeamEntityJsonMapper;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -35,9 +36,15 @@ import javax.inject.Singleton;
     this.context = context;
   }
 
-  public TeamsLocalApiDataSource createDataSource() {
+  public TeamsApiDataSource createLocalDataSource() {
     TeamEntityJsonMapper teamEntityJsonMapper = new TeamEntityJsonMapper();
-    LocalImpl local = new LocalImpl(context, teamEntityJsonMapper);
-    return new TeamsLocalApiDataSource(local);
+    LocalStorageApiImpl local = new LocalStorageApiImpl(context, teamEntityJsonMapper);
+    return new TeamsApiDataSource(local);
+  }
+
+  public TeamsApiDataSource createWebDataSource(){
+    TeamEntityJsonMapper teamEntityJsonMapper = new TeamEntityJsonMapper();
+    WebApiImp webimp = new WebApiImp(context, teamEntityJsonMapper);
+    return new TeamsApiDataSource(webimp);
   }
 }

@@ -17,7 +17,7 @@ package com.example.jhordan.euro_cleanarchitecture.data.repository;
 
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.DataSource;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamDataSourceFactory;
-import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamsLocalApiDataSource;
+import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamsApiDataSource;
 import org.junit.Before;
 import org.junit.Test;
 import org.robolectric.RuntimeEnvironment;
@@ -35,8 +35,8 @@ public class TeamDataSourceFactoryTest {
   }
 
   @Test public void givenAnInstanceTeamsLocalApiDataSource() {
-    DataSource dataSource = teamDataSourceFactory.createDataSource();
+    DataSource dataSource = teamDataSourceFactory.createLocalDataSource();
     assertThat(dataSource, is(notNullValue()));
-    assertThat(dataSource, is(instanceOf(TeamsLocalApiDataSource.class)));
+    assertThat(dataSource, is(instanceOf(TeamsApiDataSource.class)));
   }
 }

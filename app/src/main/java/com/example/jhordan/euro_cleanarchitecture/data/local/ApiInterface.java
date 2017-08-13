@@ -20,7 +20,7 @@ import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import io.reactivex.Observable;
 import java.util.List;
 
-public interface LocalApi {
+public interface ApiInterface {
   /**
    * Get an 'Observable<List<TeamEntity>>'  which will emit a List of {@link TeamEntity}.
    */

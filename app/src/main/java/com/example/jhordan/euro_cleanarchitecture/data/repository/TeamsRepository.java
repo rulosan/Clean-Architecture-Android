@@ -36,7 +36,9 @@ import javax.inject.Singleton;
   @Inject public TeamsRepository(@NonNull TeamDataSourceFactory teamDataSourceFactory,
       @NonNull TeamToTeamEntityMapper teamToTeamEntityMapper) {
     this.teamToTeamEntityMapper = teamToTeamEntityMapper;
-    this.dataSource = teamDataSourceFactory.createDataSource();
+    //TODO: el datasource se crea para acceso local
+    //this.dataSource = teamDataSourceFactory.createLocalDataSource();
+    this.dataSource = teamDataSourceFactory.createWebDataSource();
   }
 
   @Override public Observable<List<Team>> teamList() {

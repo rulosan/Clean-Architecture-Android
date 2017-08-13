@@ -18,23 +18,30 @@ package com.example.jhordan.euro_cleanarchitecture.data.local;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.util.Log;
+
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.TeamEntityJsonMapper;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
-public class LocalImpl implements LocalApi {
+public class LocalStorageApiImpl implements ApiInterface {
 
   private final Context context;
   private final TeamEntityJsonMapper teamEntityJsonMapper;
 
-  public LocalImpl(@NonNull Context context, @NonNull TeamEntityJsonMapper teamEntityJsonMapper) {
+  public LocalStorageApiImpl(@NonNull Context context, @NonNull TeamEntityJsonMapper teamEntityJsonMapper) {
     this.context = context;
     this.teamEntityJsonMapper = teamEntityJsonMapper;
   }

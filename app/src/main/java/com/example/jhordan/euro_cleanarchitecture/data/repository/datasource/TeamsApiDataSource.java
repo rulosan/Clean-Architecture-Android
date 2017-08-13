@@ -17,7 +17,7 @@
 package com.example.jhordan.euro_cleanarchitecture.data.repository.datasource;
 
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
-import com.example.jhordan.euro_cleanarchitecture.data.local.LocalApi;
+import com.example.jhordan.euro_cleanarchitecture.data.local.ApiInterface;
 import io.reactivex.Observable;
 import java.util.List;
 
@@ -25,19 +25,19 @@ import java.util.List;
 /**
  * {@link DataSource} implementation based on read local json file from assets (euro_data.json).
  */
-public class TeamsLocalApiDataSource implements DataSource {
+public class TeamsApiDataSource implements DataSource {
 
-  private final LocalApi localApi;
+  private final ApiInterface apiInterface;
 
-  public TeamsLocalApiDataSource(LocalApi localApi) {
-    this.localApi = localApi;
+  public TeamsApiDataSource(ApiInterface apiInterface) {
+    this.apiInterface = apiInterface;
   }
 
   @Override public Observable<List<TeamEntity>> teamEntityList() {
-    return this.localApi.teamEntityList();
+    return this.apiInterface.teamEntityList();
   }
 
   @Override public Observable<TeamEntity> teamEntity(String flag) {
-    return this.localApi.teamEntity(flag);
+    return this.apiInterface.teamEntity(flag);
   }
 }
