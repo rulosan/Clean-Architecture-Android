@@ -4,11 +4,19 @@ import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.map
 import com.example.jhordan.euro_cleanarchitecture.domain.model.AccessPoint;
 import com.example.jhordan.euro_cleanarchitecture.view.viewmodel.AccessPointViewModel;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 /**
  * Created by rulosan on 8/14/17.
  */
-
+@Singleton
 public class AccessPointViewModelToAccessPointMapper extends Mapper<AccessPointViewModel,AccessPoint> {
+
+    @Inject
+    public AccessPointViewModelToAccessPointMapper(){
+
+    }
     @Override
     public AccessPoint map(AccessPointViewModel value) {
         AccessPoint entity = new AccessPoint();

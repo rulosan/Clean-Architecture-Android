@@ -44,16 +44,9 @@ import io.reactivex.schedulers.Schedulers;
       return euroApplication;
   }
 
-
   @Provides @Singleton
   Repository provideRepository(Repository teamsRepository) {
     return teamsRepository;
-  }
-
-  @Provides @Singleton
-  AccessPointRepository provideAccessPointRepository(AccessPointRepository accessPointRepository)
-  {
-      return accessPointRepository;
   }
 
   @Provides @Named("executor_thread")

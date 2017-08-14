@@ -2,6 +2,7 @@ package com.example.jhordan.euro_cleanarchitecture.domain.usecase;
 
 
 import com.example.jhordan.euro_cleanarchitecture.data.repository.AccessPointRepository;
+import com.example.jhordan.euro_cleanarchitecture.data.repository.AccessPointRepositoryImp;
 import com.example.jhordan.euro_cleanarchitecture.domain.model.AccessPoint;
 
 import java.util.List;
@@ -18,7 +19,7 @@ import io.reactivex.Scheduler;
 
 public class GetAccessPoints extends UseCase<List<AccessPoint>> {
 
-    private final AccessPointRepository repository;
+    private final AccessPointRepositoryImp repository;
 
     @Inject
     public GetAccessPoints(
@@ -26,7 +27,7 @@ public class GetAccessPoints extends UseCase<List<AccessPoint>> {
             Scheduler executorThread,
             @Named("ui_thread")
             Scheduler uiThread,
-            AccessPointRepository accessPointRepository
+            AccessPointRepositoryImp accessPointRepository
     )
     {
         super(executorThread,uiThread);

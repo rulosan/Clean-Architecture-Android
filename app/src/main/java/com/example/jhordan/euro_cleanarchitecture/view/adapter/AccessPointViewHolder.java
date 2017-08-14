@@ -11,6 +11,7 @@ import com.example.jhordan.euro_cleanarchitecture.view.presenter.AccessPointPres
 import com.example.jhordan.euro_cleanarchitecture.view.viewmodel.AccessPointViewModel;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 /**
@@ -22,9 +23,12 @@ public class AccessPointViewHolder extends RecyclerView.ViewHolder {
 
     private final AccessPointPresenter presenter;
 
-    @BindView(R.id.ssid_name)  TextView ssidName;
-    @BindView(R.id.macaddress)  TextView maccaddress;
-    @BindView(R.id.identificador)  TextView id;
+    @BindView(R.id.ssid_name)
+    TextView ssidName;
+    @BindView(R.id.macaddress)
+    TextView maccaddress;
+    @BindView(R.id.identificador)
+    TextView identificador;
 
     public AccessPointViewHolder(
             @NonNull View itemView,
@@ -32,13 +36,14 @@ public class AccessPointViewHolder extends RecyclerView.ViewHolder {
             ) {
         super(itemView);
         this.presenter = accessPointPresenter;
+        ButterKnife.bind(this, itemView);
     }
 
     public void render(AccessPointViewModel accessPointViewModel)
     {
         this.ssidName.setText(accessPointViewModel.getSsid());
         this.maccaddress.setText(accessPointViewModel.getMacaddress());
-        this.id.setText(accessPointViewModel.getId());
+        this.identificador.setText(String.valueOf(accessPointViewModel.getId()));
     }
 
     private Context getContext()
