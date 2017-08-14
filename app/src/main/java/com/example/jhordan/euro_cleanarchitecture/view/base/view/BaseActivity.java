@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import butterknife.ButterKnife;
+
 import com.example.jhordan.euro_cleanarchitecture.R;
+
+import butterknife.ButterKnife;
 
 /**
  * <p>

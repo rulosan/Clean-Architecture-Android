@@ -17,6 +17,7 @@ package com.example.jhordan.euro_cleanarchitecture.data.entity.mapper.data;
 
 import com.example.jhordan.euro_cleanarchitecture.data.entity.ImageEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
+
 import java.util.ArrayList;
 import java.util.List;
 

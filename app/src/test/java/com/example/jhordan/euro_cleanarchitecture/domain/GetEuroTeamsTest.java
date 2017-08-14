@@ -18,12 +18,14 @@ package com.example.jhordan.euro_cleanarchitecture.domain;
 
 import com.example.jhordan.euro_cleanarchitecture.data.repository.TeamsRepository;
 import com.example.jhordan.euro_cleanarchitecture.domain.usecase.GetEuroTeams;
-import io.reactivex.schedulers.Schedulers;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import io.reactivex.schedulers.Schedulers;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.MatcherAssert.assertThat;

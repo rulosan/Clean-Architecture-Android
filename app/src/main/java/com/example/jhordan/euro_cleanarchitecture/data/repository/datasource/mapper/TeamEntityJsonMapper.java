@@ -20,8 +20,10 @@ import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
+
 import java.lang.reflect.Type;
 import java.util.List;
+
 import javax.inject.Inject;
 
 public class TeamEntityJsonMapper {

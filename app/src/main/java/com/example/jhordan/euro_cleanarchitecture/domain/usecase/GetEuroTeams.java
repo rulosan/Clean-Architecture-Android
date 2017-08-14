@@ -18,18 +18,23 @@ package com.example.jhordan.euro_cleanarchitecture.domain.usecase;
 
 import com.example.jhordan.euro_cleanarchitecture.data.repository.TeamsRepository;
 import com.example.jhordan.euro_cleanarchitecture.domain.model.Team;
-import io.reactivex.Observable;
-import io.reactivex.Scheduler;
+
 import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Named;
+
+import io.reactivex.Observable;
+import io.reactivex.Scheduler;
 
 public class GetEuroTeams extends UseCase<List<Team>> {
 
   private final TeamsRepository teamsRepository;
 
-  @Inject public GetEuroTeams(@Named("executor_thread") Scheduler executorThread,
-      @Named("ui_thread") Scheduler uiThread, TeamsRepository teamsRepository) {
+  @Inject public GetEuroTeams(
+          @Named("executor_thread") Scheduler executorThread,
+          @Named("ui_thread") Scheduler uiThread,
+          TeamsRepository teamsRepository) {
     super(executorThread, uiThread);
     this.teamsRepository = teamsRepository;
   }

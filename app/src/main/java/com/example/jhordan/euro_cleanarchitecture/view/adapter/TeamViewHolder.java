@@ -22,12 +22,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+
 import com.example.jhordan.euro_cleanarchitecture.R;
 import com.example.jhordan.euro_cleanarchitecture.view.presenter.TeamsPresenter;
 import com.example.jhordan.euro_cleanarchitecture.view.viewmodel.TeamViewModel;
 import com.squareup.picasso.Picasso;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class TeamViewHolder extends RecyclerView.ViewHolder {

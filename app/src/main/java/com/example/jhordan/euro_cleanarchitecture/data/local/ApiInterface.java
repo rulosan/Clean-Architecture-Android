@@ -16,10 +16,11 @@
 
 package com.example.jhordan.euro_cleanarchitecture.data.local;
 
-import com.example.jhordan.euro_cleanarchitecture.data.entity.AccessPointEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
-import io.reactivex.Observable;
+
 import java.util.List;
+
+import io.reactivex.Observable;
 
 public interface ApiInterface {
   /**
@@ -34,10 +35,5 @@ public interface ApiInterface {
    */
 
   Observable<TeamEntity> teamEntity(final String flag);
-
-
-  Observable<List<AccessPointEntity>> accessPointList();
-  
-  Observable<AccessPointEntity> accessPoint(final int id);
 
 }

@@ -18,8 +18,10 @@ package com.example.jhordan.euro_cleanarchitecture.data.repository.datasource;
 
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.local.ApiInterface;
-import io.reactivex.Observable;
+
 import java.util.List;
+
+import io.reactivex.Observable;
 
 
 /**

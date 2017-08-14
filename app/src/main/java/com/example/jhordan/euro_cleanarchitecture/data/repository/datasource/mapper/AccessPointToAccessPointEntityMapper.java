@@ -3,12 +3,20 @@ package com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.ma
 import com.example.jhordan.euro_cleanarchitecture.data.entity.AccessPointEntity;
 import com.example.jhordan.euro_cleanarchitecture.domain.model.AccessPoint;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 /**
  * Created by rulosan on 8/14/17.
  */
+@Singleton
+public class AccessPointToAccessPointEntityMapper extends Mapper<AccessPoint, AccessPointEntity> {
 
-public class AccessPointToAccessPointEntity extends Mapper<AccessPoint, AccessPointEntity> {
+    @Inject
+    public AccessPointToAccessPointEntityMapper()
+    {
 
+    }
 
     @Override
     public AccessPointEntity map(AccessPoint value) {
