@@ -17,16 +17,20 @@
 package com.example.jhordan.euro_cleanarchitecture.data.repository;
 
 import android.support.annotation.NonNull;
+
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.DataSource;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamDataSourceFactory;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.TeamToTeamEntityMapper;
 import com.example.jhordan.euro_cleanarchitecture.domain.model.Team;
-import io.reactivex.Observable;
-import io.reactivex.functions.Function;
+
 import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
+
+import io.reactivex.Observable;
+import io.reactivex.functions.Function;
 
 @Singleton public class TeamsRepository implements Repository {
 

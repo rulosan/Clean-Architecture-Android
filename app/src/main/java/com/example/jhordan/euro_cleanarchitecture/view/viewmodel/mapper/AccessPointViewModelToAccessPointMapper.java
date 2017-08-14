@@ -1,18 +1,25 @@
-package com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper;
+package com.example.jhordan.euro_cleanarchitecture.view.viewmodel.mapper;
 
-import com.example.jhordan.euro_cleanarchitecture.data.entity.AccessPointEntity;
+import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.Mapper;
 import com.example.jhordan.euro_cleanarchitecture.domain.model.AccessPoint;
+import com.example.jhordan.euro_cleanarchitecture.view.viewmodel.AccessPointViewModel;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  * Created by rulosan on 8/14/17.
  */
+@Singleton
+public class AccessPointViewModelToAccessPointMapper extends Mapper<AccessPointViewModel,AccessPoint> {
 
-public class AccessPointToAccessPointEntity extends Mapper<AccessPoint, AccessPointEntity> {
+    @Inject
+    public AccessPointViewModelToAccessPointMapper(){
 
-
+    }
     @Override
-    public AccessPointEntity map(AccessPoint value) {
-        AccessPointEntity entity = new AccessPointEntity();
+    public AccessPoint map(AccessPointViewModel value) {
+        AccessPoint entity = new AccessPoint();
         entity.setId(value.getId());
         entity.setCypher_mode(value.getCypher_mode());
         entity.setInsert_timestamp(value.getInsert_timestamp());
@@ -25,8 +32,8 @@ public class AccessPointToAccessPointEntity extends Mapper<AccessPoint, AccessPo
     }
 
     @Override
-    public AccessPoint reverseMap(AccessPointEntity value) {
-        AccessPoint model = new AccessPoint();
+    public AccessPointViewModel reverseMap(AccessPoint value) {
+        AccessPointViewModel model = new AccessPointViewModel();
         model.setId(value.getId());
         model.setCypher_mode(value.getCypher_mode());
         model.setInsert_timestamp(value.getInsert_timestamp());

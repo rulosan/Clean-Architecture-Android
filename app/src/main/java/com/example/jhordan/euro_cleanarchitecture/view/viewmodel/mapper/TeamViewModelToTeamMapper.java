@@ -19,6 +19,7 @@ package com.example.jhordan.euro_cleanarchitecture.view.viewmodel.mapper;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.Mapper;
 import com.example.jhordan.euro_cleanarchitecture.domain.model.Team;
 import com.example.jhordan.euro_cleanarchitecture.view.viewmodel.TeamViewModel;
+
 import javax.inject.Inject;
 
 public class TeamViewModelToTeamMapper extends Mapper<TeamViewModel, Team> {

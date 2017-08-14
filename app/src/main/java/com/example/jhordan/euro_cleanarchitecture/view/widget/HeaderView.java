@@ -22,9 +22,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.jhordan.euro_cleanarchitecture.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.example.jhordan.euro_cleanarchitecture.R;
 
 public class HeaderView extends LinearLayout {
 

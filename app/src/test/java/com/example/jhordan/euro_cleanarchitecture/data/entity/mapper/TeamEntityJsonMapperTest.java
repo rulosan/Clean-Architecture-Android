@@ -20,11 +20,13 @@ import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.entity.mapper.data.FakeTeamLocalAPI;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.TeamEntityJsonMapper;
 import com.google.gson.JsonSyntaxException;
-import java.util.Collection;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import java.util.Collection;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

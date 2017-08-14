@@ -18,9 +18,11 @@ package com.example.jhordan.euro_cleanarchitecture.data.repository.datasource;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+
 import com.example.jhordan.euro_cleanarchitecture.data.local.LocalStorageApiImpl;
 import com.example.jhordan.euro_cleanarchitecture.data.local.WebApiImp;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.TeamEntityJsonMapper;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 

@@ -18,6 +18,7 @@ package com.example.jhordan.euro_cleanarchitecture.data.repository;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.DataSource;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamDataSourceFactory;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamsApiDataSource;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.robolectric.RuntimeEnvironment;

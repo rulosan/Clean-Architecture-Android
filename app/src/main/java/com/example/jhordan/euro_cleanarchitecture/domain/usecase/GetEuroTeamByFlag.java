@@ -18,10 +18,12 @@ package com.example.jhordan.euro_cleanarchitecture.domain.usecase;
 
 import com.example.jhordan.euro_cleanarchitecture.data.repository.TeamsRepository;
 import com.example.jhordan.euro_cleanarchitecture.domain.model.Team;
-import io.reactivex.Observable;
-import io.reactivex.Scheduler;
+
 import javax.inject.Inject;
 import javax.inject.Named;
+
+import io.reactivex.Observable;
+import io.reactivex.Scheduler;
 
 public class GetEuroTeamByFlag extends UseCase<Team> {
 

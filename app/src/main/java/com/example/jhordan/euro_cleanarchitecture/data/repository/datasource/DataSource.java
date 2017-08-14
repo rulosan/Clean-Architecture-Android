@@ -17,8 +17,10 @@
 package com.example.jhordan.euro_cleanarchitecture.data.repository.datasource;
 
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
-import io.reactivex.Observable;
+
 import java.util.List;
+
+import io.reactivex.Observable;
 
 /**
  * Represents a data store where data is retrieved.

@@ -1,12 +1,11 @@
 package com.example.jhordan.euro_cleanarchitecture.data.repository.datasource;
 
-import android.support.annotation.NonNull;
-
 import com.example.jhordan.euro_cleanarchitecture.data.entity.AccessPointEntity;
-import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
-import com.example.jhordan.euro_cleanarchitecture.data.local.ApiInterface;
+import com.example.jhordan.euro_cleanarchitecture.data.local.AccessPointInterface;
 
 import java.util.List;
+
+import javax.inject.Inject;
 
 import io.reactivex.Observable;
 
@@ -16,13 +15,12 @@ import io.reactivex.Observable;
 
 public class AccessPointApiDataSource implements AccessPointDataSource{
 
-    private ApiInterface apiInterface;
+    private AccessPointInterface apiInterface;
 
-    public AccessPointApiDataSource(@NonNull ApiInterface apiInterface)
+    public AccessPointApiDataSource(AccessPointInterface apiInterface)
     {
         this.apiInterface = apiInterface;
     }
-
 
     @Override
     public Observable<List<AccessPointEntity>> accessPointList() {

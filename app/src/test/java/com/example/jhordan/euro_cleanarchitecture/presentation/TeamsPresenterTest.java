@@ -18,6 +18,7 @@ package com.example.jhordan.euro_cleanarchitecture.presentation;
 import com.example.jhordan.euro_cleanarchitecture.domain.usecase.GetEuroTeams;
 import com.example.jhordan.euro_cleanarchitecture.view.presenter.TeamsPresenter;
 import com.example.jhordan.euro_cleanarchitecture.view.viewmodel.mapper.TeamViewModelToTeamMapper;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

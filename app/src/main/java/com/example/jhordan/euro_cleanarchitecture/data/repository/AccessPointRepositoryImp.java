@@ -5,12 +5,13 @@ import android.support.annotation.NonNull;
 import com.example.jhordan.euro_cleanarchitecture.data.entity.AccessPointEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.AccessPointDataSource;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.AccessPointDataSourceFactory;
-import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.AccessPointToAccessPointEntity;
+import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.AccessPointToAccessPointEntityMapper;
 import com.example.jhordan.euro_cleanarchitecture.domain.model.AccessPoint;
 
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.Function;
@@ -19,16 +20,17 @@ import io.reactivex.functions.Function;
  * Created by rulosan on 8/14/17.
  */
 
-public class AccesPointRepositoryImp implements AccessPointRepository {
+@Singleton
+public class AccessPointRepositoryImp implements AccessPointRepository {
 
-    private final AccessPointToAccessPointEntity mapperEntity;
+    private final AccessPointToAccessPointEntityMapper mapperEntity;
     private final AccessPointDataSource dataSource;
 
 
     @Inject
-    public AccesPointRepositoryImp(
+    public AccessPointRepositoryImp(
             @NonNull AccessPointDataSourceFactory factory,
-            @NonNull AccessPointToAccessPointEntity mapperEntity
+            @NonNull AccessPointToAccessPointEntityMapper mapperEntity
             )
     {
         this.mapperEntity = mapperEntity;

@@ -24,7 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
-import butterknife.BindView;
+
 import com.example.jhordan.euro_cleanarchitecture.EuroApplication;
 import com.example.jhordan.euro_cleanarchitecture.R;
 import com.example.jhordan.euro_cleanarchitecture.view.adapter.TeamsAdapter;
@@ -32,8 +32,12 @@ import com.example.jhordan.euro_cleanarchitecture.view.base.view.BaseActivity;
 import com.example.jhordan.euro_cleanarchitecture.view.presenter.TeamsPresenter;
 import com.example.jhordan.euro_cleanarchitecture.view.viewmodel.TeamViewModel;
 import com.example.jhordan.euro_cleanarchitecture.view.widget.DividerItemDecoration;
+
 import java.util.List;
+
 import javax.inject.Inject;
+
+import butterknife.BindView;
 
 public class TeamsActivity extends BaseActivity implements TeamsPresenter.View {
 
@@ -118,6 +122,7 @@ public class TeamsActivity extends BaseActivity implements TeamsPresenter.View {
   }
 
   private void initializePresenter() {
+    presenter.setView(this);
     presenter.setView(this);
   }
 

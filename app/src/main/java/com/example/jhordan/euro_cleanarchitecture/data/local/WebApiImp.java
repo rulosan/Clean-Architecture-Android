@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.example.jhordan.euro_cleanarchitecture.data.entity.AccessPointEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.TeamEntityJsonMapper;
 
@@ -73,16 +72,6 @@ public class WebApiImp implements ApiInterface
                 }
             }
         });
-    }
-
-    @Override
-    public Observable<List<AccessPointEntity>> accessPointList() {
-        return null;
-    }
-
-    @Override
-    public Observable<AccessPointEntity> accessPoint(int id) {
-        return null;
     }
 
     private TeamEntity searchByFlag(String flag){

@@ -17,6 +17,7 @@
 package com.example.jhordan.euro_cleanarchitecture;
 
 import android.app.Application;
+
 import com.example.jhordan.euro_cleanarchitecture.di.components.DaggerMainComponent;
 import com.example.jhordan.euro_cleanarchitecture.di.components.MainComponent;
 import com.example.jhordan.euro_cleanarchitecture.di.modules.MainModule;

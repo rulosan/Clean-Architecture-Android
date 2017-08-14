@@ -5,10 +5,7 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.example.jhordan.euro_cleanarchitecture.data.entity.AccessPointEntity;
-import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.AccessPointEntityJsonMapper;
-import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.mapper.TeamEntityJsonMapper;
-import com.example.jhordan.euro_cleanarchitecture.domain.model.AccessPoint;
 
 import java.io.IOException;
 import java.util.List;
@@ -24,7 +21,7 @@ import okhttp3.Response;
  * Created by rulosan on 8/14/17.
  */
 
-public class AccessPointWebImp implements ApiInterface {
+public class AccessPointWebImp implements AccessPointInterface {
 
     private final Context context;
     private final AccessPointEntityJsonMapper accessPointEntityJsonMapper;
@@ -36,16 +33,6 @@ public class AccessPointWebImp implements ApiInterface {
     {
         this.context = context;
         this.accessPointEntityJsonMapper = mapper;
-    }
-
-    @Override
-    public Observable<List<TeamEntity>> teamEntityList() {
-        return null;
-    }
-
-    @Override
-    public Observable<TeamEntity> teamEntity(String flag) {
-        return null;
     }
 
     @Override

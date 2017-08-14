@@ -13,5 +13,5 @@ import io.reactivex.Observable;
 public interface AccessPointRepository
 {
     Observable<List<AccessPoint>> accessPointList();
-    Observable<AccessPoint> accessPointById(int id);
+    Observable<AccessPoint> accessPointById(final int id);
 }

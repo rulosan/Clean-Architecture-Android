@@ -19,14 +19,17 @@ package com.example.jhordan.euro_cleanarchitecture.data.repository;
 import com.example.jhordan.euro_cleanarchitecture.data.entity.TeamEntity;
 import com.example.jhordan.euro_cleanarchitecture.data.local.ApiInterface;
 import com.example.jhordan.euro_cleanarchitecture.data.repository.datasource.TeamsApiDataSource;
-import io.reactivex.Observable;
-import java.util.ArrayList;
-import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import io.reactivex.Observable;
 
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
