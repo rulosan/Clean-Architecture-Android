@@ -36,7 +36,7 @@ public interface ApiInterface {
   Observable<TeamEntity> teamEntity(final String flag);
 
 
-  Observable<AccessPointEntity> accessPointList();
+  Observable<List<AccessPointEntity>> accessPointList();
   
   Observable<AccessPointEntity> accessPoint(final int id);
 

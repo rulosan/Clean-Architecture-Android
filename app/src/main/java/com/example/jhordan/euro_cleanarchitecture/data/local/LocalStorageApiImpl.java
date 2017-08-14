@@ -79,7 +79,7 @@ public class LocalStorageApiImpl implements ApiInterface {
   }
 
   @Override
-  public Observable<AccessPointEntity> accessPointList() {
+  public Observable<List<AccessPointEntity>> accessPointList() {
     return null;
   }
 
